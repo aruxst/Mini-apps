@@ -1,0 +1,177 @@
+/* Reset all elements to remove default margin, padding, and set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* General body styling */
+body {
+  background-color: #f8f8f8; /* Light gray background for contrast */
+  color: #333; /* Dark text color for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Header styling */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #ff6f61; /* Soft red background */
+  width: 100%;
+  color: white; /* White text color for readability */
+}
+
+/* Header title styling */
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+/* Search bar container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Needed for positioning suggestions dropdown */
+}
+
+/* Search input styling */
+#search-input {
+  padding: 10px;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  width: 60%;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* Styling for search and favorites buttons */
+#search-button, #show-favorites-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff6f61; /* Matching header background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for buttons */
+#search-button:hover, #show-favorites-button:hover {
+  background-color: #ff3f2d; /* Darker red on hover */
+}
+
+/* Suggestions dropdown box styling */
+#suggestions {
+  position: absolute;
+  top: 100%; /* Positioned below the search input */
+  width: 60%;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff; /* White background for contrast */
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  display: none; /* Hidden by default */
+  z-index: 10; /* Ensure dropdown is above other elements */
+}
+
+/* Individual suggestion item styling */
+#suggestions div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for suggestion items */
+#suggestions div:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Recipe grid styling for displaying recipes in grid layout */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four columns for wide screens */
+  gap: 20px;
+  width: 90%;
+  margin-top: 30px;
+}
+
+/* Recipe card styling */
+.recipe-card {
+  background-color: white;
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.3s; /* Smooth scaling transition */
+  margin-top: auto;
+}
+
+/* Scale-up effect on hover for recipe cards */
+.recipe-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Image within recipe card styling */
+.recipe-card img {
+  width: 100%;
+  height: auto;
+}
+
+/* Recipe card title styling */
+.recipe-card h3 {
+  padding: 10px;
+  font-size: 1.25em;
+  color: #ff6f61; /* Matching the primary color */
+}
+
+/* Button styling within recipe card */
+.recipe-card button {
+  margin: 10px 5px;
+  padding: 8px 16px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Modal styling for recipe details */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Highest z-index to overlay all other elements */
+}
+
+/* Modal content styling */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  max-width: 80%; /* Max width for responsive scaling */
+  max-height: 80%; /* Max height to allow overflow scrolling */
+  overflow-y: auto; /* Enable scrolling if content is too long */
+  position: relative;
+  text-align: center;
+}
+
+/* Close button styling for modals */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #ff6f61; /* Matching primary color */
+}

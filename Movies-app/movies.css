@@ -1,0 +1,205 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background for dark mode effect */
+    color: #ffffff; /* White text color */
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Search input styling */
+#search {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #333; /* Dark background for input */
+    color: white; /* White text color */
+}
+
+/* Search button styling */
+#search-btn {
+    background-color: #ff6347; /* Coral color */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for search button */
+#search-btn:hover {
+    background-color: #ff4500; /* Darker coral on hover */
+}
+
+/* Show watchlist button styling */
+#show-watchlist {
+    background-color: #ff6347;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for show watchlist button */
+#show-watchlist:hover {
+    background-color: #ff4500;
+}
+
+/* Styling for the search bar container */
+.search-bar {
+    position: relative; /* Enables positioning of suggestions relative to search bar */
+}
+
+/* Auto-suggest dropdown styling */
+#auto-suggest {
+    position: absolute;
+    top: 100%; /* Places it right below the input field */
+    left: 0;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto; /* Allows scrolling for overflow content */
+    background-color: #333; /* Dark background for dropdown */
+    border-radius: 5px;
+    margin-top: 5px;
+    color: white;
+    z-index: 10;
+    display: none; /* Hidden by default */
+}
+
+/* Individual suggestion styling */
+#auto-suggest div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Hover effect for suggestions */
+#auto-suggest div:hover {
+    background-color: #444;
+}
+
+/* Grid layout for displaying movies and watchlist */
+.movie-section, .watchlist-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive column layout */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Maximum width for large screens */
+    margin-top: 20px;
+}
+
+/* Movie card styling */
+.filmCard {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    max-width: 200px;
+    margin: auto;
+}
+
+/* Movie image styling */
+.filmCardImg {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps aspect ratio */
+    border-bottom: 2px solid #333; /* Separator between image and info */
+}
+
+/* Information section of the movie card */
+.filmCardInfo {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Movie title styling */
+.filmCardTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6347; /* Coral color for titles */
+    margin: 5px 0;
+}
+
+/* Release date and rating styling */
+.release-date, .rating {
+    font-size: 14px;
+    color: #b0b0b0; /* Lighter color for secondary info */
+    margin: 4px 0;
+}
+
+/* Styling for buttons on movie cards */
+.show-btn, .add-watchlist-btn, .remove-watchlist-btn {
+    background-color: #ff6347;
+    border: none;
+    padding: 8px 15px;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for buttons on movie cards */
+.show-btn:hover, .add-watchlist-btn:hover, .remove-watchlist-btn:hover {
+    background-color: #ff4500; /* Darker coral on hover */
+}
+
+/* Main styling for modal overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* High z-index to overlay other content */
+}
+
+/* Styling for modal content container */
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh; /* Limits the height of the modal */
+    overflow-y: auto; /* Enables vertical scroll for long content */
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+/* Close button styling for modal */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

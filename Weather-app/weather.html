@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Link to the external CSS file for styling the app -->
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <!-- Main container for the entire application -->
+    <div class="app-container">
+        <!-- Header section containing the app title, search bar, and unit toggle options -->
+        <header>
+            <h1>Weather App</h1>
+            <div class="search-bar">
+                <!-- Input for searching weather by city name, with an off autocomplete to avoid browser suggestions -->
+                <input type="text" id="search" placeholder="Search for a city..." autocomplete="off">
+                <!-- Button to trigger the search for the entered city -->
+                <button id="search-button">🔍</button>
+                <!-- Button to get weather using the user's current location -->
+                <button id="use-location">📍</button>
+            </div>
+            <!-- Dropdown menu to display auto-suggested city names as the user types -->
+            <div id="auto-suggest" class="suggestions"></div>
+            <!-- Dropdown menu for selecting units (Celsius or Fahrenheit) -->
+            <div class="toggle-units">
+                <label for="unit-toggle">Units: </label>
+                <select id="unit-toggle">
+                    <option value="metric">°C</option>
+                    <option value="imperial">°F</option>
+                </select>
+            </div>
+        </header>
+
+        <!-- Main content section displaying current weather and 5-day forecast -->
+        <main>
+            <!-- Current weather display section -->
+            <section id="current-weather">
+                <!-- City name display -->
+                <h2 id="city-name">--</h2>
+                <div class="weather-info">
+                    <!-- Icon representing the current weather conditions -->
+                    <img id="weather-icon" src="" alt="Weather Icon" />
+                    <!-- Current temperature display -->
+                    <p id="temperature">--°</p>
+                </div>
+                <!-- Current weather conditions description (e.g., sunny, cloudy) -->
+                <p id="conditions">--</p>
+                <!-- Current humidity level -->
+                <p id="humidity">Humidity: --%</p>
+                <!-- Current wind speed -->
+                <p id="wind-speed">Wind Speed: --</p>
+            </section>
+
+            <!-- 5-Day Forecast display section -->
+            <section id="forecast">
+                <h3>5-Day Forecast</h3>
+                <!-- Container for dynamically inserted forecast cards, showing the forecast for each day -->
+                <div id="forecast-cards" class="forecast-cards">
+                    <!-- Forecast cards will be dynamically inserted here by JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Link to the external JavaScript file containing app functionality -->
+    <script src="weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Browser</title>
+    <!-- Link to external CSS file for styling the app -->
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <!-- Header section containing the title, search bar, and watchlist button -->
+    <header>
+        <h1>Movie Browser</h1>
+        <div class="search-bar">
+            <!-- Input for movie search and a button to initiate search -->
+            <input type="text" id="search" placeholder="Search for a movie...">
+            <button id="search-btn" onclick="searchMovies()">Search</button>
+            <!-- Div for displaying search suggestions as the user types -->
+            <div id="auto-suggest" class="auto-suggest-box"></div>
+        </div>
+        <!-- Button to open the watchlist modal -->
+        <button id="show-watchlist" onclick="showWatchlist()">Show Watchlist</button>
+    </header>
+
+    <!-- Section for displaying searched movies in a grid layout -->
+    <section id="movies" class="movie-section"></section>
+
+    <!-- Modal for displaying detailed information about a selected movie -->
+    <div id="movie-details" class="modal hidden">
+        <div class="modal-content">
+            <!-- Close button for the movie details modal -->
+            <span id="close-btn" class="close-btn">&times;</span>
+            <!-- Movie poster image in the modal -->
+            <img id="movie-poster" src="" alt="Movie Poster" class="modal-img">
+            <!-- Movie title -->
+            <h2 id="movie-title"></h2>
+            <!-- Synopsis or description of the movie -->
+            <p id="synopsis"></p>
+            <!-- Movie rating, runtime, and cast information -->
+            <p><strong>Rating:</strong> <span id="rating"></span></p>
+            <p><strong>Runtime:</strong> <span id="runtime"></span> minutes</p>
+            <p><strong>Cast:</strong> <span id="cast"></span></p>
+        </div>
+    </div>
+
+    <!-- Modal for displaying the user's saved watchlist -->
+    <div id="watchlist-modal" class="modal hidden">
+        <div class="modal-content">
+            <!-- Close button for the watchlist modal -->
+            <span id="close-watchlist-btn" class="close-btn">&times;</span>
+            <h2>Your Watchlist</h2>
+            <!-- Container for watchlist items, displayed in a grid format -->
+            <div id="watchlist-content" class="watchlist-section"></div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file for handling functionality -->
+    <script src="movies.js"></script>
+</body>
+</html>

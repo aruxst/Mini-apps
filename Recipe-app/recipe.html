@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+  <!-- Header and Search -->
+  <header>
+    <h1>Recipe Finder</h1>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search recipes...">
+      <button id="search-button">Search</button>
+      <button id="show-favorites-button">Show Favorites</button>
+      <div id="suggestions"></div>
+    </div>
+    
+  </header>
+
+  <!-- Recipe Grid -->
+  <section class="recipe-grid" id="recipe-grid">
+    <!-- Recipe cards will be dynamically inserted here -->
+  </section>
+
+  <!-- Recipe Details Modal -->
+  <div class="modal" id="recipe-modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-button">&times;</span>
+      <img id="recipe-image" src="" alt="Recipe Image">
+      <h2 id="recipe-title">Recipe Title</h2>
+      <p id="recipe-description">Description of the recipe goes here.</p>
+      <h3>Ingredients:</h3>
+      <ul id="recipe-ingredients">
+        <!-- Ingredients list will be dynamically inserted here -->
+      </ul>
+      <h3>Instructions:</h3>
+      <p id="recipe-instructions">Step-by-step instructions will go here.</p>
+      <h3>Nutritional Information:</h3>
+      <p id="recipe-nutrition">Calories: <span id="calories"></span>, Protein: <span id="protein"></span>, Fat: <span id="fat"></span></p>
+    </div>
+  </div>
+
+  <!-- Favorite Recipes Modal -->
+  <div class="modal" id="favorites-modal">
+    <div class="modal-content">
+      <span class="close-button" id="close-favorites-button">&times;</span>
+      <h2>My Favorite Recipes</h2>
+      <section class="recipe-grid" id="favorite-recipes">
+        <!-- Favorite recipes will be dynamically inserted here -->
+      </section>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="recipe.js"></script>
+</body>
+</html>
